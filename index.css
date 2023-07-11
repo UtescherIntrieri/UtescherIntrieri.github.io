@@ -1,123 +1,23 @@
+html {
+  scroll-behavior: smooth;
+ }
+
 body {
   background-color: black;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0rem;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  
-  50% {
-    scale: 1 1.5;
-  }
-  
-  to {
-    rotate: 360deg;
-  }
-}
-
-#blob {
-  background-color: white;
-  height: 24vmax;
-  aspect-ratio: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgb(97, 217, 177), rgb(74, 31, 162));
-  animation: rotate 20s infinite;
-  opacity: 0.8;
-  z-index: -1;
-}
-
-#blur {
-  height: 200%;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  backdrop-filter: blur(12vmax);
-}
-
-#name {
-  /* font-family: 'Space Mono', monospace; */
-  font-size: clamp(3rem, 10vw, 10rem);
-  color: white;
-  white-space: nowrap;
-  padding: 0rem clamp(1rem, 2vw, 3rem);
-  border-radius: clamp(0.4rem, 0.75vw, 1rem);
-  margin: 0rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-}
-
-.typewriter {
-  height: 100vh;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-
-#type {
-  font-size: 3rem;
-  padding: 0.5rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  overflow: hidden;
-}
-.typed-text {
-  font-weight: normal;
-  color: white;
-}
-.cursor {
-  display: inline-block;
-  background-color: #ccc;
-  margin-left: 0.1rem;
-  width: 3px;
-  animation: blink 1s infinite;
-}
-.cursor.typing {
-  animation: none;
-}
-@keyframes blink {
-  0%  { background-color: #ccc; }
-  49% { background-color: #ccc; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
-  100%  { background-color: #ccc; }
-}
-
-#kawaii1 {
-  color: black;
-  margin: 0;
-  padding: 10vh 0 0 90vw;
-}
-#kawaii2 {
-  margin: 0;
-  padding: 0 0 0 10vw;
-}
-#kawaii3 {
-  margin: 0;
-  padding: 60vh 0 0 80vw;
-  font-size: 24px;
-}
-#kawaii4 {
-  margin: 0;
-  padding: 5vh 0 0 20vw;
-}
-
 #second {
   position: absolute;
   top: 100%;
-  height: 200%;
+  height: 100%;
   width: 100%;
+  /* background-color: black; */
 }
 
 #profilepic {
@@ -125,12 +25,24 @@ body {
   border-radius: 50%;
   float: right;
   margin-right: 10%;
+  margin-top: 12.5%;
 }
 
 #text1 {
   color: white;  
-  margin: 5% 0 0 10%;
-  padding: 0;
-  /* background-color: aqua; */
+  margin-left:10%;
+  margin-top: 12.5%;
+  padding-top:3%;
   width: 50%;
+}
+
+#btndown {
+  color: white;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+#btnup {
+  color: white;
+  left: 50%;
 }
