@@ -21,10 +21,11 @@
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, rgba(97, 217, 177, 0.7), rgb(143, 94, 242));
+  background: linear-gradient(to right, rgba(97, 217, 177, 0.7), rgb(143, 94, 242) 60%);
   animation: rotate 20s infinite;
   opacity: 0.8;
   z-index: -1;
+  overflow-x: hidden;
 }
 
 #blur {
@@ -92,6 +93,9 @@
 #kawaii2 {
   margin: 0;
   padding: 0 0 0 10vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
 }
 #kawaii3 {
   margin: 0;
@@ -99,6 +103,7 @@
   font-size: 24px;
 }
 #kawaii4 {
+  font-size: 30px;
   margin: 0;
   padding: 5vh 0 0 20vw;
 }

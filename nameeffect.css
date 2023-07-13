@@ -1,0 +1,14 @@
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8f5ef2 50%);
+  padding: 4px;
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition-duration: .5s;
+  transition-delay: .25s;
+  &:hover {
+    background-size: 100% 88%;
+    color: black;
+    transition-delay: .25s;
+  }
+}
