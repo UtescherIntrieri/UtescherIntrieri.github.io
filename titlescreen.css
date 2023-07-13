@@ -12,11 +12,18 @@
   }
 }
 
+#blobwrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 #blob {
   background-color: white;
   height: 24vmax;
   aspect-ratio: 1;
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
@@ -25,7 +32,6 @@
   animation: rotate 20s infinite;
   opacity: 0.8;
   z-index: -1;
-  overflow-x: hidden;
 }
 
 #blur {
@@ -34,10 +40,10 @@
   position: absolute;
   z-index: -1;
   backdrop-filter: blur(8vmax);
+  overflow: hidden;
 }
 
 #name {
-  /* font-family: 'Space Mono', monospace; */
   font-size: clamp(3rem, 10vw, 10rem);
   color: white;
   white-space: nowrap;
@@ -58,13 +64,13 @@
 }
 
 #type {
-  font-size: 3rem;
-  font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
   overflow: hidden;
+  margin-top: 20px;
 }
 .typed-text {
+  font-size: clamp(1rem, 4vw, 4rem);
   font-weight: normal;
   color: white;
 }
@@ -73,6 +79,7 @@
   background-color: #ccc;
   margin-left: 0.1rem;
   width: 3px;
+  font-size: clamp(1rem, 4vw, 4rem);
   animation: blink 1s infinite;
 }
 .cursor.typing {
