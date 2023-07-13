@@ -129,7 +129,7 @@
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
-@media(max-width: 1000px) {
+/* @media(max-width: 1000px) {
   body {
     align-items: flex-start;  
   }
@@ -180,4 +180,4 @@
   .card {
     width: 100%;
   }
-}
+} */
