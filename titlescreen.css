@@ -46,8 +46,7 @@
 #centered {
   position: absolute;
   height: 100vh;
-  left: 50%;
-  translate: -50%;
+  width: 100vw;
   /* background-color: red; */
 }
 
@@ -63,6 +62,7 @@
   translate: -50%;
   text-align: center;
   line-height: 90%;
+  width: fit-content;
   /* background-color: green; */
 }
 
@@ -75,7 +75,7 @@
 .typewriter {
   position: relative;
   left: 52%;
-  width: 100vw;
+  width: fit-content;
   /* background-color: yellow; */
 }
 
