@@ -43,6 +43,14 @@
   overflow: hidden;
 }
 
+#centered {
+  position: absolute;
+  height: 100vh;
+  left: 50%;
+  translate: -50%;
+  /* background-color: red; */
+}
+
 #name {
   font-size: clamp(3rem, 10vw, 10rem);
   color: white;
@@ -50,24 +58,32 @@
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   margin: 0rem;
-  position: absolute;
+  position: relative;
   left: 50%;
+  translate: -50%;
+  text-align: center;
+  line-height: 90%;
+  /* background-color: green; */
+}
+
+#text0 {
+  position: relative;
   top: 50%;
-  translate: -50% -50%;
+  translate: 0 -50%;
 }
 
 .typewriter {
-  height: 100vh;
-  position: absolute;
-  left: 53%;
-  top: 53%;
+  position: relative;
+  left: 52%;
+  width: 100vw;
+  /* background-color: yellow; */
 }
 
 #type {
   letter-spacing: 0.1rem;
-  text-align: center;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 0px;
+
 }
 .typed-text {
   font-size: clamp(1rem, 4vw, 4rem);
@@ -79,7 +95,7 @@
   background-color: #ccc;
   margin-left: 0.1rem;
   width: 3px;
-  font-size: clamp(1rem, 4vw, 4rem);
+  font-size: clamp(1rem, 3vw, 3rem);
   animation: blink 1s infinite;
 }
 .cursor.typing {
