@@ -1,0 +1,7 @@
+#corfav {
+  position: relative;
+  top: 50%;
+  translate: 0 -50%;
+  text-align: center;
+  color: white;
+}

@@ -83,14 +83,14 @@ body {
   top: 100%;
   height: 100%;
   width: 100%;
-  background-color: green;
+  /* background-color: black; */
 }
 #Resume {
   position: absolute;
   top: 200%;
   height: 100%;
   width: 100%;
-  background-color: pink;
+  /* background-color: black; */
 }
 
 #Projects {
@@ -98,7 +98,7 @@ body {
   top: 300%;
   height: 100%;
   width: 100%;
-  background-color: orange;
+  /* background-color: black; */
 }
 
 #Miscellaneous {
@@ -106,7 +106,7 @@ body {
   top: 400%;
   height: 100%;
   width: 100%;
-  background-color: blue;
+  /* background-color: black; */
 }
 
 #NicePeople {
