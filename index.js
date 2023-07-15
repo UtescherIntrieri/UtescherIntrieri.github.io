@@ -97,27 +97,3 @@ document.getElementById("boxs").onmousemove = e => {
     card.style.setProperty("--mouse-y", `${y}px`);
   };
 }
-
-/* -- Sparks effect -- */
-let index = 0,
-    interval2 = 1000;
-
-const rand = (min, max) => 
-  Math.floor(Math.random() * (max - min + 1)) + min;
-
-const animate = star => {
-  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
-  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
-
-  star.style.animation = "none";
-  star.offsetHeight;
-  star.style.animation = "";
-}
-
-for(const star of document.getElementsByClassName("magic-star")) {
-  setTimeout(() => {
-    animate(star);
-    
-    setinterval2(() => animate(star), 1000);
-  }, index++ * (interval2 / 3))
-}
