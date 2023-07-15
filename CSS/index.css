@@ -7,35 +7,24 @@ body {
   grid-auto-flow: column;
   place-content: center;
 }
-#ptbr {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  object-position: -35%;
-  scale: 3;
-  transition: .4s;
-  }
-#enus {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  object-position: 30%;
-  scale: 1.2;
-  transition: .4s;
 
+a {
+  text-decoration: none;
 }
+
 figure {
   display: grid;
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
   transition: .4s;
-
 }
+
 figure > * {
   grid-area: 1/1;
   transition: .4s;
 }
+
 figure figcaption {
   display: grid;
   align-items: end;
@@ -54,8 +43,22 @@ figure figcaption {
   margin: -1px;
 }
 
-a {
-  text-decoration: none;
+#ptbr {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  object-position: -35%;
+  scale: 3;
+  transition: .4s;
+  }
+  
+#enus {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 30%;
+  scale: 1.2;
+  transition: .4s;
 }
 
 figure:hover figcaption{
