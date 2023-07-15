@@ -6,6 +6,53 @@ body {
   display: grid;
   grid-auto-flow: column;
   place-content: center;
+  margin: 0;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blobwrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#blob {
+  background-color: white;
+  height: 24vmax;
+  aspect-ratio: 1;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgba(97, 217, 177, 0.7), rgb(143, 94, 242) 60%);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#Title {
+  height: 150%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  backdrop-filter: blur(8vmax);
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 a {
@@ -40,7 +87,10 @@ figure figcaption {
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   -webkit-mask-clip: text, padding-box;
-  margin: -1px;
+}
+
+#fig2 figcaption {
+  justify-items: end;
 }
 
 #ptbr {
@@ -56,19 +106,29 @@ figure figcaption {
   width: 250px;
   height: 300px;
   object-fit: cover;
-  object-position: 30%;
+  object-position: 31%;
   scale: 1.2;
   transition: .4s;
 }
+
+figure:hover #ptbr {
+  translate: -20px;
+}
+figure:hover #enus {
+  translate: 20px;
+}
+
 
 figure:hover figcaption{
   --_i: 0%;
 }
 #fig1:hover {
   rotate: -5deg;
+  scale: 1.1;
 }
 #fig2:hover {
   rotate: 5deg;
+  scale: 1.1;
 }
 @supports not (-webkit-mask-clip: text) {
   figure figcaption {
