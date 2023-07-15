@@ -86,14 +86,38 @@ document.addEventListener("DOMContentLoaded", function() {
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-// /* -- Cards effect -- */
-// document.getElementById("cards").onmousemove = e => {
-//   for(const card of document.getElementsByClassName("card")) {
-//     const rect = card.getBoundingClientRect(),
-//     x = e.clientX - rect.left,
-//     y = e.clientY - rect.top;
+/* -- Cards effect -- */
+document.getElementById("boxs").onmousemove = e => {
+  for(const card of document.getElementsByClassName("box")) {
+    const rect = card.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
     
-//     card.style.setProperty("--mouse-x", `${x}px`);
-//     card.style.setProperty("--mouse-y", `${y}px`);
-//   };
-// }
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+}
+
+/* -- Sparks effect -- */
+let index = 0,
+    interval2 = 1000;
+
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
+    
+    setinterval2(() => animate(star), 1000);
+  }, index++ * (interval2 / 3))
+}

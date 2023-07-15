@@ -34,13 +34,14 @@
   z-index: -1;
 }
 
-#blur {
+#Title {
   height: 150%;
   width: 100%;
   position: absolute;
   z-index: -1;
   backdrop-filter: blur(8vmax);
   overflow: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 #centered {
@@ -50,6 +51,11 @@
   /* background-color: red; */
 }
 
+#text0 {
+  position: relative;
+  top: 50%;
+  translate: 0 -50%;
+}
 #name {
   font-size: clamp(3rem, 10vw, 10rem);
   color: white;
@@ -64,12 +70,6 @@
   line-height: 90%;
   width: fit-content;
   /* background-color: green; */
-}
-
-#text0 {
-  position: relative;
-  top: 50%;
-  translate: 0 -50%;
 }
 
 .typewriter {
@@ -115,7 +115,7 @@
 }
 #kawaii2 {
   margin: 0;
-  padding: 0 0 0 10vw;
+  padding: 0 0 0 40vw;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
   font-size: 24px;
