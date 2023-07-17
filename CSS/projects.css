@@ -6,9 +6,8 @@
 #boxs {
   display: flex;
   position: relative;
-  top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  translate: -50%;
   flex-wrap: wrap;
   gap: 8px;  
   max-width: 916px;
