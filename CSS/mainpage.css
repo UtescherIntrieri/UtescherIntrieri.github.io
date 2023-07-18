@@ -74,6 +74,7 @@ body {
 }
 
 #AboutMe {
+  position: relative;
   min-height: 100vh;
   height: 100%;
   width: 100%;
@@ -87,7 +88,7 @@ body {
 }
 
 #Projects {
-  display: flex;
+  position: relative;
   align-items: center;
   min-height: 100vh;
   height: 100%;
@@ -96,6 +97,7 @@ body {
 }
 
 #Miscellaneous {
+  position: relative;
   min-height: 100vh;
   height: 100%;
   width: 100%;
@@ -103,6 +105,7 @@ body {
 }
 
 #NicePeople {
+  position: relative;
   min-height: 100vh;
   height: 100%;
   width: 100%;

@@ -24,18 +24,21 @@
 }
 
 #profilepic {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  translate: 0 -50%;
   height: 334px;
   border-radius: 50%;
   float: right;
-  margin-right: 10%;
-  margin-top: 12.5%;
 }
 
 #text1 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  translate: 0 -50%;
   color: white;  
-  margin-left:10%;
-  margin-top: 12.5%;
-  padding-top:3%;
   width: 50%;
   font-size: 1.5em;
   font-weight: bold;

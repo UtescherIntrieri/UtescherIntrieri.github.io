@@ -1,5 +1,5 @@
 #icons {
-  margin: 10px 10% 0 10%;
+  margin: 15px 10% 0 10%;
 }
 
 .curriculo {
@@ -44,6 +44,7 @@
 
 #cvwrapper h2, h3, p {
   margin: 0;
+  font-weight: 600;
 }
 
 #cvwrapper a {
@@ -53,4 +54,16 @@
 
 #cv1, #cv2, #cv3 {
   padding: 10px;
+}
+
+.curriculo a:hover {
+  background: -webkit-linear-gradient(#84fab0, #8f5ef2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#icons a :hover {
+  transition: .2s;
+  scale: 1.3;
 }
