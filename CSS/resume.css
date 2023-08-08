@@ -117,6 +117,7 @@
 #certificate:hover {
   background-image: radial-gradient(#8f5ef280 1px, transparent 1px);
 }
+
 #certificatewrapper:hover {
   border-color: #8f5ef280;
 }

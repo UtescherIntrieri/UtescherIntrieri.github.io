@@ -1,8 +1,188 @@
-#corfav {
+/* Facts */
+#facts {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  text-align: center;
+  top: 10%;
+  left: 10%;
   color: white;
+}
+
+#facts span {
+  transition: all .5s;
+}
+
+#facts span:hover {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+/* Color */
+#color {
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  color: white;
+}
+
+#color span {
+  transition: all .5s;
+}
+
+#color span:hover {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+#book span:hover {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+#hexcode {
+  color: #5e1fdd;
+}
+
+/* Book */
+#book {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  color: white;
+  height: fit-content;
+  padding: 0px;
+  margin: 0px;
+}
+
+#book span {
+  transition: all .5s;
+}
+
+#book a {
+  transition: all .5s;
+  text-decoration: none;
+  color: white;
+}
+
+#book span:hover a {
+  color: black;
+}
+
+#book span a:hover {
+  color: #5e1fdd;
+}
+
+/* Movie */
+#movie {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  color: white;
+}
+
+#movie h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#movie span {
+  transition: all .5s;
+}
+
+#movie a {
+  transition: all .5s;
+  text-decoration: none;
+  color: white;
+}
+
+#movie span:hover {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+#movie span:hover a {
+  color: black;
+}
+
+#movie span a:hover {
+  color: #5e1fdd;
+}
+
+/* Movie */
+#game {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: white;
+}
+
+#game h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#game span {
+  transition: all .5s;
+}
+
+#game a {
+  transition: all .5s;
+  text-decoration: none;
+  color: white;
+}
+
+#game span:hover {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+#game span:hover a {
+  color: black;
+}
+
+#game span a:hover {
+  color: #5e1fdd;
+}
+
+/* Music */
+#music {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  color: white;
+  height: fit-content;
+  padding: 0px;
+  margin: 0px;
+}
+
+#music h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#music span {
+  transition: all .5s;
+}
+
+#music a {
+  transition: all .5s;
+  text-decoration: none;
+  color: white;
+}
+
+#music span:hover {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+#music span:hover a {
+  color: black;
+}
+
+#music span a:hover {
+  color: #5e1fdd;
 }
