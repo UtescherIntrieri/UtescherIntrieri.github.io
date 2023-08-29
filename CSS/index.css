@@ -130,6 +130,7 @@ figure:hover figcaption{
   rotate: 5deg;
   scale: 1.1;
 }
+
 @supports not (-webkit-mask-clip: text) {
   figure figcaption {
    -webkit-mask: none;

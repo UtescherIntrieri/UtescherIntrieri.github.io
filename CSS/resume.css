@@ -23,6 +23,7 @@
   background-size: 1.1rem 1.1rem;
   border-radius: 1.25rem;
   overflow: hidden;
+  text-shadow: 1px 1px 40px black;
   color: white;
 }
 
