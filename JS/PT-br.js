@@ -86,6 +86,20 @@ document.addEventListener("DOMContentLoaded", function() {
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+/* -- Sidebar -- */
+function openNav() {
+  document.getElementById("mySidebar").style.right = "0px";
+  document.getElementById("main").style.marginRight = "300px";
+  document.getElementById( "toggle" ).setAttribute( "onClick", "javascript: closeNav();" );
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.right = "-300px";
+  document.getElementById("main").style.marginRight = "0px";
+  document.getElementById( "toggle" ).setAttribute( "onClick", "javascript: openNav();" );
+}
+
+
 /* -- Cards effect -- */
 document.getElementById("boxs").onmousemove = e => {
   for(const card of document.getElementsByClassName("box")) {
@@ -96,4 +110,52 @@ document.getElementById("boxs").onmousemove = e => {
     card.style.setProperty("--mouse-x", `${x}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
   };
+}
+
+/* -- Nice People -- */
+function getLinearFunction(x1, y1, x2, y2) {
+  var slope = (y2 - y1) / (x2 - x1);
+  return function(x) {
+    return slope * (x - x1) + y1;
+  }
+}
+
+const gallery = document.getElementById('gallery');
+const thumbnail = document.querySelector('.thumbnail');
+const thumbnailWrapper = document.getElementById('thumbnail-wrapper');
+
+thumbnailWrapper.addEventListener('mousemove', handleMouseMove);
+// document.addEventListener('key')
+
+function handleMouseMove(e) {
+  const noOfPics = Array.from(thumbnailWrapper.childNodes).length
+  const clientX = e.clientX;
+  const clientY = e.clientY;
+  const width = thumbnailWrapper.clientWidth;
+  const height = thumbnailWrapper.clientHeight;
+  const wrapperWidth = thumbnail.clientWidth * noOfPics;
+  const wrapperHeight = thumbnailWrapper.clientHeight;
+  const percentX = clientX / width * 100;
+  const percentY = clientY / height * 100;
+  const scrollLeft = thumbnailWrapper.scrollLeft
+  var maxScrollLeft = thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth;
+  // when clientX = 0 you want scrollx = 0
+  // when clientx = width you want scrollX = maxScrollLeft
+  var foo = getLinearFunction(0, 0, width, maxScrollLeft);
+
+  // EDIT: improvement: 
+  var foo = getLinearFunction(0 + 400, 0, width - 100, maxScrollLeft);
+
+  output.innerHTML = JSON.stringify({
+    clientX,
+    clientY,
+    width,
+    height,
+    wrapperWidth,
+    wrapperHeight,
+    scrollLeft,
+    maxScrollLeft
+  }, null, 4)
+
+  thumbnailWrapper.scroll(foo(clientX), 0)
 }

@@ -86,6 +86,19 @@ document.addEventListener("DOMContentLoaded", function() {
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+/* -- Sidebar -- */
+function openNav() {
+  document.getElementById("mySidebar").style.right = "0px";
+  document.getElementById("main").style.marginRight = "300px";
+  document.getElementById( "toggle" ).setAttribute( "onClick", "javascript: closeNav();" );
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.right = "-300px";
+  document.getElementById("main").style.marginRight = "0px";
+  document.getElementById( "toggle" ).setAttribute( "onClick", "javascript: openNav();" );
+}
+
 /* -- Cards effect -- */
 document.getElementById("boxs").onmousemove = e => {
   for(const card of document.getElementsByClassName("box")) {
@@ -97,3 +110,87 @@ document.getElementById("boxs").onmousemove = e => {
     card.style.setProperty("--mouse-y", `${y}px`);
   };
 }
+
+/* -- Nice People -- */
+function getLinearFunction(x1, y1, x2, y2) {
+  var slope = (y2 - y1) / (x2 - x1);
+  return function(x) {
+    return slope * (x - x1) + y1;
+  }
+}
+
+const gallery = document.getElementById('gallery');
+const thumbnail = document.querySelector('.thumbnail');
+const thumbnailWrapper = document.getElementById('thumbnail-wrapper');
+
+thumbnailWrapper.addEventListener('mousemove', handleMouseMove);
+// document.addEventListener('key')
+
+function handleMouseMove(e) {
+  const noOfPics = Array.from(thumbnailWrapper.childNodes).length
+  const clientX = e.clientX;
+  const clientY = e.clientY;
+  const width = thumbnailWrapper.clientWidth;
+  const height = thumbnailWrapper.clientHeight;
+  const wrapperWidth = thumbnail.clientWidth * noOfPics;
+  const wrapperHeight = thumbnailWrapper.clientHeight;
+  const percentX = clientX / width * 100;
+  const percentY = clientY / height * 100;
+  const scrollLeft = thumbnailWrapper.scrollLeft
+  var maxScrollLeft = thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth;
+  var foo = getLinearFunction(0 + 400, 0, width - 100, maxScrollLeft);
+
+  output.innerHTML = JSON.stringify({
+    clientX,
+    clientY,
+    width,
+    height,
+    wrapperWidth,
+    wrapperHeight,
+    scrollLeft,
+    maxScrollLeft
+  }, null, 4)
+
+  thumbnailWrapper.scroll(foo(clientX), 0)
+}
+
+// //initialize
+// var winHeight = window.innerHeight,
+// 		pages = document.getElementsByClassName('page'),
+//     navLinks = document.querySelectorAll('#menu-nav a'),
+// 		currentPage = 0;
+
+//     console.log(winHeight);
+// window.addEventListener('mousewheel', function(e){
+//   scrollPages(e.wheelDelta);
+// });
+// window.addEventListener('DOMMouseScroll', function(e){
+//   scrollPages(-1 * e.detail);
+// });
+
+// function scrollPages(delta){
+// 	var direction = (delta > 0) ? 'up' : 'down',
+//     currentPageOffset = currentPage * winHeight;
+  
+//   if(direction == 'down' && currentPage <= pages.length - 2){
+//   	window.scrollTo(0, currentPageOffset + winHeight);
+//     currentPage++;
+//   } else if(direction == 'up' && currentPage > 0) {
+//   	window.scrollTo(0, currentPageOffset - winHeight);
+//     currentPage--;
+//   }
+// }
+
+// for(var i = 0; i < navLinks.length; i++){
+// 	navLinks[i].addEventListener('click', updateNav(i));
+// }
+
+// function updateNav(i){
+// 	return function(){
+//     for(var j=0 ; j < navLinks.length; j++) {
+//     	navLinks[j].parentNode.classList.remove('current');
+//     }
+//     navLinks[i].parentNode.classList.add('current');
+//     currentPage = i;
+//  }
+// }

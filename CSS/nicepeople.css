@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+#NicePeople h1 {
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  translate: -50% -50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+}
+
+#NicePeople img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+#peopleinfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  font-size: larger;
+  visibility: hidden;
+  /* -webkit-transition: visibility 0s, opacity 0.2s linear; 
+  transition: visibility 0s, opacity 0.2s linear, transform 0.2s linear; */
+  transition: all 0.1s linear;
+  overflow: hidden;
+  padding: 40px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#peopleinfo i {
+  color: white;
+}
+
+#gallery {
+  width: 80vw;
+  height: 220px;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8f5ef2 50%);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 10px;
+}
+
+#thumbnail-wrapper {
+  display: flex;
+  overflow-x: scroll;
+}
+
+#thumbnail-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnail {
+  text-align: center;
+  flex: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 2px;
+  transition: all .2s ease-in-out;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.original {
+  height: auto;
+  position: absolute;
+  top: 0%;
+}
+
+.thumbnail:hover {
+  background-color: black;
+  -webkit-filter: brightness(100%);
+  /* padding: 10px 0px 0px 15px; */
+}
+
+.thumbnail:hover #peopleinfo{
+  /* transform: translate(15px, 10px); */
+  background-color: #000000c2;
+  visibility: visible;
+}
+
+#peopleinfo i:hover {
+color: #8f5ef2;
+}
+
+#PeopleIco1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background: -webkit-linear-gradient(#84fab0, #8f5ef2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  z-index: -1;
+  animation: animName 3s linear infinite;
+}
+
+#PeopleIco2 {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  background: -webkit-linear-gradient(#84fab0, #8f5ef2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  z-index: -1;
+  animation: animName 3s linear reverse infinite;
+}
+
+#PeopleIco3 {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  background: -webkit-linear-gradient(#84fab0, #8f5ef2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  z-index: -1;
+  animation: animName 3s linear reverse infinite;
+}
+
+#PeopleIco4 {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  background: -webkit-linear-gradient(#84fab0, #8f5ef2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  z-index: -1;
+  animation: animName 3s linear reverse infinite;
+}
+  
+@keyframes animName {
+  0%{
+      transform: scale(3) rotate(0deg);
+    }
+  100%{
+      transform: scale(3) rotate(360deg);
+    }
+}  
