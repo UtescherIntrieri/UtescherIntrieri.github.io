@@ -140,16 +140,16 @@ function handleMouseMove(e) {
   var maxScrollLeft = thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth;
   var foo = getLinearFunction(0 + 400, 0, width - 100, maxScrollLeft);
 
-  output.innerHTML = JSON.stringify({
-    clientX,
-    clientY,
-    width,
-    height,
-    wrapperWidth,
-    wrapperHeight,
-    scrollLeft,
-    maxScrollLeft
-  }, null, 4)
+  // output.innerHTML = JSON.stringify({
+  //   clientX,
+  //   clientY,
+  //   width,
+  //   height,
+  //   wrapperWidth,
+  //   wrapperHeight,
+  //   scrollLeft,
+  //   maxScrollLeft
+  // }, null, 4)
 
   thumbnailWrapper.scroll(foo(clientX), 0)
 }
